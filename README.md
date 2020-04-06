@@ -10,18 +10,19 @@ Everything is a string in shell. SO can define any variable.
 1. `var=1000` `dir=/home/User1/Documents`
 2. To use the variable, please add the $ sign before it, for example, change directory to dir `cd $dir`.
 #### - for loop
-`
-for item in items
+```
+for item in items 
 do 
-	
+	<cmd>
 done
-`
+```
+
 #### - if else statement
-`
+```
 if [[ condition  ]]
 then 
-
+	<cmd>
 else
-
+	<cmd>
 fi
-`
+```
