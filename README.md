@@ -30,3 +30,6 @@ fi
 #### - Run c++ via g++
 1. `g++ main.cpp -o output`
 2. `./output`
+
+#### - Kill process on GPU
+`nvidia-smi | grep 'python' | awk '{ print $3 }' | xargs -n1 kill -9`
