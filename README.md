@@ -28,5 +28,5 @@ fi
 ```
 
 #### - Run c++ via g++
-1. g++ main.cpp -o output
-2. ./output
+1. `g++ main.cpp -o output`
+2. `./output`
