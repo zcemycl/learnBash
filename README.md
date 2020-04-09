@@ -33,3 +33,8 @@ fi
 
 #### - Kill process on GPU
 `nvidia-smi | grep 'python' | awk '{ print $3 }' | xargs -n1 kill -9`
+
+#### - Search your pi in the same wifi
+1. `ifconfig | grep inet`
+2. `nmap -sP 192.168.1.0/24`
+3. `ssh pi@IPAddress`
