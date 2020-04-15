@@ -38,3 +38,9 @@ fi
 1. `ifconfig | grep inet`
 2. `nmap -sP 192.168.1.0/24`
 3. `ssh pi@IPAddress`
+
+#### - Fix no sound in dell inspiron-7590 with ubuntu system
+1. `sudo vim /etc/default/grub`
+2. Find GRUB_CMDLINE_LINUX_DEFAULT and add snd_hda_intel.dmic_detect=0 to the end of it. (ex: `GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 snd_hda_intel.dmic_detect=0"`)
+3. `sudo grub-mkconfig -o /boot/grub/grub.cfg`
+4. Reboot the system.
