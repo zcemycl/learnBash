@@ -55,7 +55,7 @@ fi
 7. Configure your credential by `aws configure`. Enter your aws keys from step 3. 
 8. List the content of your bucket. `aws s3 ls s3://youtubefaces`.
 9. Upload files via `aws s3 cp [FILENAME] s3://youtubefaces`.
-10. Upload folder via `aws s3 cp [FOLDER] s3://youtubefaces`.
-
+10. Upload folder via `aws s3 cp [FOLDER] s3://youtubefaces --recursive`. (recursive is to loop via all subfolders)
+11. Remove `aws s3 rm [FILENAMEPATH]`.
 
 
