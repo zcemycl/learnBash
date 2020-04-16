@@ -44,3 +44,18 @@ fi
 2. Find GRUB_CMDLINE_LINUX_DEFAULT and add snd_hda_intel.dmic_detect=0 to the end of it. (ex: `GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 snd_hda_intel.dmic_detect=0"`)
 3. `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 4. Reboot the system.
+
+#### - Set up aws and upload folder/files to s3
+1. Set up an aws account. 
+2. Click your profile and its 'My Security Credentials'.
+3. Click the session 'Access keys (access key ID and secret access key)' and 'Create New Access Key'. Please download the keys.
+4. Click Services and search S3. 
+5. Create a bucket in S3. (For example, I created youtubefaces)
+6. In your terminal, `pip install awscli` `pip install boto3`.
+7. Configure your credential by `aws configure`. Enter your aws keys from step 3. 
+8. List the content of your bucket. `aws s3 ls s3://youtubefaces`.
+9. Upload files via `aws s3 cp [FILENAME] s3://youtubefaces`.
+10. Upload folder via `aws s3 cp [FOLDER] s3://youtubefaces`.
+
+
+
