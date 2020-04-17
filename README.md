@@ -58,4 +58,13 @@ fi
 10. Upload folder via `aws s3 cp [FOLDER] s3://youtubefaces --recursive`. (recursive is to loop via all subfolders)
 11. Remove `aws s3 rm [FILENAMEPATH]`.
 
+#### - Set up ec2 and ssh 
+1. Search ec2 in services. Launch instance (in my case, an ubuntu instance, so user name is 'ubuntu').
+2. Download pem key file (for example, `abc.pem`).
+3. Wait for the instance state to turn green. 
+4. Go to your linux terminal, and navigate to your pem file directory. 
+5. Command `chmod 400 abc.pem`.
+6. To connect via ssh, command `ssh -i abc.pem ubuntu@[Public DNS (IPv4)]`. You can find Public DNS when you click on your launched instance in the description session.
 
+#### - Upload files to your ec2 instance. 
+1. Command `scp -i abc.pem [TARGET FILE] ubuntu@[Public DNS]`.
