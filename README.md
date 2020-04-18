@@ -68,3 +68,9 @@ fi
 
 #### - Upload files to your ec2 instance. 
 1. Command `scp -i abc.pem [TARGET FILE] ubuntu@[Public DNS]`.
+
+#### - Setup aws ubuntu machine (g4dn.4xlarge)
+1. `source activate pytorch_p36`.
+2. `sudo apt-get update` and `sudo apt-get upgrade`.
+3. `pip install --upgrade pip`.
+4. `pip install numpy, pandas, dlib, face_recognition`.
