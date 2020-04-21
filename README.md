@@ -9,6 +9,9 @@ One of the advantages of coding, in MacOS or Ubuntu -- Unix-based system, is tha
 Everything is a string in shell. SO can define any variable.
 1. `var=1000` `dir=/home/User1/Documents`
 2. To use the variable, please add the $ sign before it, for example, change directory to dir `cd $dir`.
+#### - Simple calculation
+`echo $((100/20))`
+
 #### - for loop
 ```
 for item in items 
