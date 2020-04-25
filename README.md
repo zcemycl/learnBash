@@ -86,3 +86,13 @@ fi
 3. Find the session ID. `screen -ls`
 4. Store screen. `screen -r 10835`
 5. Kill screen. `screen -X -S [session_name] quit`
+
+#### - Better than `screen`, `tmux` is better to keep ec2 python running even when your laptop off. 
+1. `ssh` your ec2 instance. 
+2. `tmux new-session -s [session_name]` to start and connect to a new named session.
+3. Detach from any session by. `Ctrl+B` -> `release Ctrl+B` -> `D`
+4. List all active sessions. `tmux list-sessions`
+5. Run your python in one of the active sessions. 
+6. Detach. 
+7. After logging out and in again, connect to a named session. `tmux attach-session -t [session_name]`
+8. Kill the session. `tmux kill-session -t session_name`
