@@ -62,6 +62,7 @@ fi
 11. Remove `aws s3 rm [FILENAMEPATH]`.
 
 #### - Set up ec2 and ssh 
+** remember to set your security group.
 1. Search ec2 in services. Launch instance (in my case, an ubuntu instance, so user name is 'ubuntu').
 2. Download pem key file (for example, `abc.pem`).
 3. Wait for the instance state to turn green. 
@@ -73,7 +74,15 @@ fi
 1. Command `scp -i abc.pem [TARGET FILE] ubuntu@[Public DNS]`.
 
 #### - Setup aws ubuntu machine (g4dn.4xlarge)
+** remember to increase your use limit. 
 1. `source activate pytorch_p36`.
 2. `sudo apt-get update` and `sudo apt-get upgrade`.
 3. `pip install --upgrade pip`.
 4. `pip install numpy, pandas, dlib, face_recognition`.
+
+#### - `screen` to run process remotely even when disconnected
+1. `screen` or `screen -S session_name`
+2. Detach from linux screen session. `Ctrl+a d`
+3. Find the session ID. `screen -ls`
+4. Store screen. `screen -r 10835`
+5. Kill screen. `screen -X -S [session_name] quit`
