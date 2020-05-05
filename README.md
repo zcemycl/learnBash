@@ -96,3 +96,8 @@ fi
 6. Detach. 
 7. After logging out and in again, connect to a named session. `tmux attach-session -t [session_name]`
 8. Kill the session. `tmux kill-session -t session_name`
+
+#### - Kill nvidia-smi process
+1. `nvidia-smi` or `sudo fuser -v /dev/nvidia*` to check PID that is running.
+2. `sudo kill -9 [PID]` to kill the target process.
+3. Reset the nvidia gpu, by `sudo nvidia-smi --gpu-reset -i 0` or without `-i 0` to reset all gpus.
