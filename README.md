@@ -121,3 +121,4 @@ print('Help me.')
 	</node>
 </launch>
 ```
++ `catkin_make` to make package in src
