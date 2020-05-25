@@ -106,4 +106,18 @@ fi
 + `roslaunch <package_name> <launch_file>`
 + `roscd <package_name>`
 + `catkin_create_pkg <package_name> <package_dependecies>`, e.g. `catkin_create my_package rospy`
-
++ `rospack list` list all of the packages in your ROS system
++ `cd src` and `touch simple.py` 
+```python
+import rospy
+rospy.init_node('ObiWan')
+print('Help me.')
+```
++ `roscd my_package`, `mkdir launch` and `touch launch/my_package_launch_file.launch`
+```
+<launch>
+	<!-- my_package -->
+	<node pkg="my_package" type="simple.py" name="ObiWan" output="screen">
+	</node>
+</launch>
+```
