@@ -104,7 +104,7 @@ fi
 
 #### - Rospy
 + `roslaunch <package_name> <launch_file>`
-+ `roscd <package_name>`
++ `roscd <package_name>`, example `roscd my_package` and `roscd std_msgs/msg/`
 + `catkin_create_pkg <package_name> <package_dependecies>`, e.g. `catkin_create my_package rospy`
 + `rospack list` list all of the packages in your ROS system
 + `cd src` and `touch simple.py` 
@@ -123,4 +123,7 @@ print('Help me.')
 ```
 + `catkin_make` to make package in src `catkin_make --only-pkg-with-deps my_package` (only compile one specific package)
 + `rosparam list`, `rosparam get <parameter_name>`, `rosparam set <parameter_name> <value>` ROS parameters settings and list
-
++ `rostopic list | grep '/counter'` counter is the variable assigned in rospy loop. 
++ `rostopic info /counter` can see the Publishers name and ip.
++ `rostopic echo /counter` will print out real-time counter data. 
++ `rosmsg show <message>` for example, `rosmsg show std_msgs/Int32`.
