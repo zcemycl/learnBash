@@ -121,4 +121,4 @@ print('Help me.')
 	</node>
 </launch>
 ```
-+ `catkin_make` to make package in src
++ `catkin_make` to make package in src `catkin_make --only-pkg-with-deps my_package` (only compile one specific package)
