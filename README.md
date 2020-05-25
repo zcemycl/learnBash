@@ -101,3 +101,9 @@ fi
 1. `nvidia-smi` or `sudo fuser -v /dev/nvidia*` to check PID that is running.
 2. `sudo kill -9 [PID]` to kill the target process.
 3. Reset the nvidia gpu, by `sudo nvidia-smi --gpu-reset -i 0` or without `-i 0` to reset all gpus.
+
+#### - Rospy
++ `roslaunch <package_name> <launch_file>`
++ `roscd <package_name>`
++ `catkin_create_pkg <package_name> <package_dependecies>`, e.g. `catkin_create my_package rospy`
+
