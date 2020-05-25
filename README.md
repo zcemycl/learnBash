@@ -127,3 +127,8 @@ print('Help me.')
 + `rostopic info /counter` can see the Publishers name and ip.
 + `rostopic echo /counter` will print out real-time counter data. 
 + `rosmsg show <message>` for example, `rosmsg show std_msgs/Int32`.
++ `rostopic pub /counter std_msgs/Int32 5` to print the Subscriber message
++ `rosservice list`
++ `rosservice info /name_of_service`
++ `rosservice call /the_service_name "traj_name: 'release_food'"` example.
++ `rossrv show name_of_the_package/Name_of_Service_message`
