@@ -132,3 +132,14 @@ print('Help me.')
 + `rosservice info /name_of_service`
 + `rosservice call /the_service_name "traj_name: 'release_food'"` example.
 + `rossrv show name_of_the_package/Name_of_Service_message`
+
+#### - How to use gazebo?
++ `roscore`
++ `roslaunch gazebo_ros empty_world.launch` to get the empty simulation world.
++ `roslaunch my_mira_description spawn_mira_simple_collisions_inertias.launch 
+` to output the object. It calls this launch file and calls another fundamental one which activates both gazebo and robot model.
++ `rosservice call /gazebo/delete_model "model_name: 'mira'"` delete the model in gazebo. (Or you can use script to achieve this call)
+
+#### - How to use rviz to debug?
++ `roslaunch my_mira_description urdf_visualize.launch model:='$(find my_mira_description)/urdf/mira_geometric_collisions_inertias.urdf'` to activate debug mode in rviz. 
++ Please add the Robot Model and TF.
